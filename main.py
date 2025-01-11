@@ -4,6 +4,7 @@ while execute:
     print("1.- Suma de n cantidad de números (positivos y negativos")
     print("4.- Calcular el factorial (!n) de un número")
     print("7.- Promedio de una serie de números")
+    print("8.- Buscar valores máximo y mínimo de una serie de números")
 
     option = input("Seleccione una opción: ")
 
@@ -51,6 +52,31 @@ while execute:
                 else:
                     print("No se ingresaron números válidos para calcular el promedio")
                 repeat = input("¿Deseas calcular el promedio de otra serie? (s/n): ") == "s"
+        case "8":
+            repeat = True
+            while repeat:
+                numbers = []
+                print("Introduce solamente números enteros (para terminar, escribe 'Fin')")
+                while repeat:
+                    entry = input("Número: ")
+                    if entry == "Fin":
+                        break
+                    try:
+                        number = int(entry)
+                        numbers.append(number)
+                    except ValueError:
+                        print("Favor de ingresar solamente números o escribe 'Fin' para terminar")
+                if numbers:
+                    maximum = max(numbers)
+                    minimum = min(numbers)
+                    total = len(numbers)
+                    print("Resultados:")
+                    print("El valor máximo es: ", maximum)
+                    print("El valor mínimo es: ", minimum)
+                    print("El total de números ingresados es de: ", total)
+                else:
+                    print("Ningun número fue ingresado")
+                repeat = input("¿Deseas repetir el proceso? (s/n): ") == "s"
     execute = input("¿Desea elegir alguna otra opción del menú? (s/n): ") == "s"
 
 
