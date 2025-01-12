@@ -1,10 +1,11 @@
 execute = True
 
 while execute:
-    print("1.- Suma de n cantidad de números (positivos y negativos")
+    print("1.- Suma de n cantidad de números (positivos y negativos)")
     print("4.- Calcular el factorial (!n) de un número")
     print("7.- Promedio de una serie de números")
     print("8.- Buscar valores máximo y mínimo de una serie de números")
+    print("3.- Dividir dos números")
 
     option = input("Seleccione una opción: ")
 
@@ -20,6 +21,22 @@ while execute:
                     sum += inputNumber
                 print(f"La suma es {sum}")
                 repeat = input("¿Desea realizar otra suma? (s/n): ") == "s"
+
+        case "3":
+            repeat = True
+            while repeat:
+                try:
+                    numerador = float(input("Ingresa el numerador: "))
+                    denominador = float(input("Ingresa el denominador: "))
+                    resultado = numerador / denominador
+                    print(f"El resultado es: {resultado}")
+                except ZeroDivisionError:
+                    print("Error: No se puede dividir entre cero.")
+                except ValueError:
+                    print("Error: Ingresa solo números válidos.")
+
+                repeat = input("¿Desea dividir otro número? (s/n): ") == "s"
+
         case "4":
             repeat = True
             while repeat:
@@ -34,6 +51,15 @@ while execute:
                         count -= 1
                     print(f"El factorial de {inputNumber} es {factorial}")
                 repeat = input("¿Desea calcular el factorial de otro número? (s/n): ") == "s"
+
+        case "6":
+            repeat = True
+            while repeat:
+                numero = float(input("Ingresa un número: "))
+                print(f"El cuadrado de {numero} es: {numero**2}")
+                print(f"El cubo de {numero} es: {numero**3}")
+                repeat = input("¿Desea calcular otro número? (s/n): ") == "s"
+
         case "7":
             repeat = True
             while repeat:
@@ -42,7 +68,7 @@ while execute:
                 print("Introduce números para calcular el promedio. Ingresa -1 para terminar")
                 while True:
                     number = float(input("Número: "))
-                    if number == 1:
+                    if number == -1:
                         break
                     dividend += number
                     divisor += 1
@@ -52,6 +78,7 @@ while execute:
                 else:
                     print("No se ingresaron números válidos para calcular el promedio")
                 repeat = input("¿Deseas calcular el promedio de otra serie? (s/n): ") == "s"
+
         case "8":
             repeat = True
             while repeat:
@@ -75,10 +102,7 @@ while execute:
                     print("El valor mínimo es: ", minimum)
                     print("El total de números ingresados es de: ", total)
                 else:
-                    print("Ningun número fue ingresado")
+                    print("Ningún número fue ingresado")
                 repeat = input("¿Deseas repetir el proceso? (s/n): ") == "s"
+    
     execute = input("¿Desea elegir alguna otra opción del menú? (s/n): ") == "s"
-
-
-
-
