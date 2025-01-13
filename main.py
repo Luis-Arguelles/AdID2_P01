@@ -1,18 +1,15 @@
 execute = True
 
 while execute:
-<<<<<<< HEAD
-    print("1.- Suma de n cantidad de números (positivos y negativos)")
-=======
     print("\n ")
     print("1.- Suma de n cantidad de números (positivos y negativos")
     print("2.- Producto entre 'n' numeros")
->>>>>>> 7246656fa8fcb591889a161c7dd44cf333356aa6
+    print("3.- Dividir dos números")
     print("4.- Calcular el factorial (!n) de un número")
     print("5.- Impresión en la pantalla de las tablas de multiplicar entre el 1 al 10.")
+    print("6.- Calcular el cuadrado y el cubo de un numero")
     print("7.- Promedio de una serie de números")
     print("8.- Buscar valores máximo y mínimo de una serie de números")
-    print("3.- Dividir dos números")
 
     option = input("Seleccione una opción: ")
 
@@ -29,22 +26,6 @@ while execute:
                 print(f"La suma es {sum}")
                 repeat = input("¿Desea realizar otra suma? (s/n): ") == "s"
 
-<<<<<<< HEAD
-        case "3":
-            repeat = True
-            while repeat:
-                try:
-                    numerador = float(input("Ingresa el numerador: "))
-                    denominador = float(input("Ingresa el denominador: "))
-                    resultado = numerador / denominador
-                    print(f"El resultado es: {resultado}")
-                except ZeroDivisionError:
-                    print("Error: No se puede dividir entre cero.")
-                except ValueError:
-                    print("Error: Ingresa solo números válidos.")
-
-                repeat = input("¿Desea dividir otro número? (s/n): ") == "s"
-=======
         case "2":
             repeat = True
             while repeat:
@@ -60,7 +41,21 @@ while execute:
                     mult = mult * inputNumber
                     print("La multiplicacion de ", anterior, "multiplicado por:", valor, "da como resultado: ", mult)
                 repeat = input("¿Desea realizar otra multiplicacion? (s/n): ") == "s"
->>>>>>> 7246656fa8fcb591889a161c7dd44cf333356aa6
+
+        case "3":
+            repeat = True
+            while repeat:
+                try:
+                    numerador = float(input("Ingresa el numerador: "))
+                    denominador = float(input("Ingresa el denominador: "))
+                    resultado = numerador / denominador
+                    print(f"El resultado es: {resultado}")
+                except ZeroDivisionError:
+                    print("Error: No se puede dividir entre cero.")
+                except ValueError:
+                    print("Error: Ingresa solo números válidos.")
+
+                repeat = input("¿Desea dividir otro número? (s/n): ") == "s"
 
         case "4":
             repeat = True
@@ -77,15 +72,6 @@ while execute:
                     print(f"El factorial de {inputNumber} es {factorial}")
                 repeat = input("¿Desea calcular el factorial de otro número? (s/n): ") == "s"
 
-<<<<<<< HEAD
-        case "6":
-            repeat = True
-            while repeat:
-                numero = float(input("Ingresa un número: "))
-                print(f"El cuadrado de {numero} es: {numero**2}")
-                print(f"El cubo de {numero} es: {numero**3}")
-                repeat = input("¿Desea calcular otro número? (s/n): ") == "s"
-=======
         case "5":
             repeat = True
             while repeat:
@@ -98,7 +84,14 @@ while execute:
                 else:
                     print("Opcion equivocada")
                 repeat = input("¿Desea ver la tabla de otro número? (s/n): ") == "s"
->>>>>>> 7246656fa8fcb591889a161c7dd44cf333356aa6
+
+        case "6":
+            repeat = True
+            while repeat:
+                numero = float(input("Ingresa un número: "))
+                print(f"El cuadrado de {numero} es: {numero**2}")
+                print(f"El cubo de {numero} es: {numero**3}")
+                repeat = input("¿Desea calcular otro número? (s/n): ") == "s"
 
         case "7":
             repeat = True
